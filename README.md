@@ -59,7 +59,8 @@ python client/main.py
 
 ## Тестирование
 ```bash
-pytest
+export PYTHONPATH=$(pwd)
+pytest -v
 ```
 ---
 
