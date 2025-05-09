@@ -22,20 +22,37 @@
 ---
 
 ## Установка
+1. Клонируйте репозиторий 
+```bash
+git clone git@github.com:1ce1ceice/TaskManager.git
+cd TaskManager 
+```
+
+2. Создайте виртуальное окружение
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. Установите зависимости
 ```bash
 pip install -r requirements.txt
 ``` 
----
 
-## Запуск
+4. Настройка базы данных
+```sql
+CREATE DATABASE taskmanager;
+postgresql://postgres@localhost:5433/taskmanager
+```
 
-Сервер
+5. Запуск сервера
 ```bash
 python server.py
 ```
-
-Клиент
+6. Запуск клиента (GUI)
+В ДРУГОМ ТЕРМИНАЛЕ
 ```bash
+source venv/bin/activate
 python client/main.py
 ```
 ---
