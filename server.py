@@ -16,13 +16,13 @@ class Task(db.Model):
     description = db.Column(db.Text)
     completed = db.Column(db.Boolean, default=False)
 
-with app.app_context():
-    db.create_all()
-
 @app.route('/tasks', methods=['GET'])
 def get_tasks():
     tasks = Task.query.all()
-    return jsonify([{'id': t.id, 'title': t.title, 'description': t.description, 'completed': t.completed} for t in tasks])
+    return jsonify([
+        {'id': t.id, 'title': t.title, 'description': t.description, 'completed': t.completed}
+        for t in tasks
+    ])
 
 @app.route('/tasks', methods=['POST'])
 def add_task():
@@ -50,4 +50,6 @@ def delete_task(task_id):
     return jsonify({'success': True})
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
