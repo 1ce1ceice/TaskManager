@@ -59,11 +59,24 @@ python client/main.py
 
 ## Тестирование
 ```bash
-export PYTHONPATH=$(pwd)
-pytest -v
+pytest
 ```
 ---
 
 ## Автор
-Заикин Тимофей 
+Заикин Тимофей
+
+---
+
+## Видео демонстрация работы
+
+https://github.com/user-attachments/assets/a4669dfe-cf90-4d75-8b91-25c060497542
+
+---
+
+## Видео демонстрация работы тестов
+
+https://github.com/user-attachments/assets/37e60b86-39a0-40ad-b2a5-901457e9e51d
+
+
 
