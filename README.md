@@ -17,7 +17,7 @@
 - `model.py` `server.py` - Бизнес-логика и работа с базой данных и API
 - `view.py` - Пользовательский интерфейс (Tkinter GUI)
 - `controller.py` - Управление событиями
-- `tests/` - Юнит-тесты
+- `tests/` - pytest тесты
 
 ---
 
